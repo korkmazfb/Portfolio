@@ -1,201 +1,234 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Ceviche One', cursive;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Ceviche One", cursive;
 }
 
-html{
-    font-size: 62.5%;
-}
-    
-body{
-    min-height: 200vh;
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
-.foto{
-    width: 100%;
-    height: 100vh;
-    background: #EDE6DB;
-    margin-top: 7rem;
-    display: flex;
-    justify-content: center;
+body {
+  min-height: 200vh;
 }
 
-.foto, .mert{
-    font-size: 7rem;
-
+section {
+  height: 80rem;
 }
 
-.logos{
-    margin-top: 5rem ;
+.foto {
+  width: 100%;
+  height: 100vh;
+  background: #ede6db;
+  margin-top: 7rem;
+  display: flex;
+  justify-content: center;
 }
 
-.logos > img{
-    width: 7rem;
-    height: 7rem;
+
+.mert {
+  font-size: 7rem;
 }
 
-header h1{
-    margin-top:10rem;
-    padding-left: 2rem;
-
+.logos {
+  margin-top: 5rem;
 }
 
-nav{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem 0;
-    z-index: 2;
-    background:rgba(255,255,255,0.3);
-    backdrop-filter: blur(10px);
-    border: 0.2rem solid rgba(255,255,255,0.2);
-    position:fixed;
-    top:0;
-    left:0;
-    padding-left:1rem;
-    
+.logos > img {
+  width: 7rem;
+  height: 7rem;
 }
 
-nav img{
-    width: 10rem;
+header h1 {
+  margin-top: 10rem;
+  padding-left: 2rem;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 0.2rem solid rgba(255, 255, 255, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-left: 1rem;
+}
+
+nav img {
+  width: 10rem;
 }
 
 nav ul {
-    width:100%;
-    display:flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 1rem 3rem;
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 1rem 3rem;
 }
-nav ul li a{
-    text-decoration: none;
-    color: #413F42;
+nav ul li a {
+  text-decoration: none;
+  color: #413f42;
 }
-.text-box{
-  display:flex;
-  align-items: center; 
-}
-
-.text-box h1{
-    font-size: 4.5rem;
-    margin-bottom: 2rem;
-    color: #413F42;
-}
-.text-box a{
-    display:inline-block;
-    text-decoration: none;
-    color: #fff;
-    background: #413F42;
-    padding:1rem 3rem;
-    font-size: 1.8rem;
-    margin-top: 5rem;
-    border-radius: 0.6rem;
+.text-box {
+  display: flex;
+  align-items: center;
 }
 
-
+.text-box h1 {
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
+  color: #413f42;
+}
+.text-box a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: #413f42;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  margin-top: 5rem;
+  border-radius: 0.6rem;
+}
 
 /* Image size veranderen via hier */
 
-.text-box img{
-    width: 70rem;
-    height: 70rem;
-    margin-bottom: 25rem;
+.text-box img {
+  width: 70rem;
+  height: 70rem;
+  margin-bottom: 25rem;
+}
+
+.user-box {
+  background: #d9e0ff;
+  position: absolute;
+  top: 0;
+  right: 12%;
+  width: 35rem;
+  height: 50rem;
+}
+
+.mert-box {
+  height: 40rem;
+  width: 40rem;
+  background: #d9e0ff;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mert-box > h2 {
+  font-size: 4rem;
+}
+
+.me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+  flex-direction: column;
+  font-size: 6rem;
+  gap: 4.5rem;
+  height: 10rem;
+}
+
+.me > p {
+  font-size: 4rem;
+}
+
+.about {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+  flex-direction: row;
+}
+
+.about1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 18rem;
+  gap: 2rem;
+  transition: 0.2s transform;
+  border-radius: 2rem;
+}
+
+.about1:hover {
+  transform: scale(1.05);
+}
+
+.p {
+  width: 20rem;
+  height: 20rem;
 }
 
 
-.user-box{
-    background: #d9e0ff;
-    position: absolute;
-    top: 0;
-    right: 12%;
-    width:35rem;
-    height: 50rem;
+.font{
+  font-size: 1.4rem;
+  width: 20rem;
 }
 
 
-
-.mert-box{
-    height:40rem;
-    width:40rem;
-    background:#d9e0ff;
-    position:absolute;
-    border-radius: 50%;
-    top:50%;
-    left:50%;
-    transform:translateX(-50%);
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap:2rem;
+.projecten {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.mert-box > h2{
-    font-size: 4rem;
+.project h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5rem;
+  font-size: 9rem;
 }
 
-.me{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10rem;
-    margin-bottom: 25rem;
-    flex-direction: column;
-    font-size: 6rem;
-    gap: 4.5rem;
+.box {
+  flex-grow: 1;
+  width:30rem;
+  height:30rem;
 }
 
-.me > p{
-    font-size: 4rem;
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.about{
-    width:100% ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10rem;
-    flex-direction:row ;
-    
-}
-
-.about1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 18rem;
-    gap: 2rem;
-    transition: 0.2s transform;
-    border-radius: 2rem;    
-}
-
-
-.about1:hover{
-    transform: scale(1.05);
-
-}
-.p1{
-    background: red;
-    width: 20rem;
-    height: 20rem;
-}
-
-.p2{
-    background: blue;
-    width: 20rem;
-    height: 20rem;
-
-}
-
-.p3{
-    background: grey;
-    width: 20rem;
-    height: 20rem;
-
+.top{
+  width: 5rem;
+  height: 5rem;
+  background-color: #222831;
+  border: none;
+  font-size: 150%;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 5px;
+  color: white;
+  position: fixed;
+  bottom: 7.5rem;
+  right: 7.5rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
