@@ -226,6 +226,42 @@ nav ul li a {
   transform: scale(1.05);
 }
 
+.spraak {
+  margin-top: 5rem;
+  font-size: 2.5rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-family: monospace;
+}
+
+.spraak_img{
+  border-radius: 50%;
+}
+
+.hide {
+  display: none;
+}
+#result {
+  margin-top: 2em;
+  background: #EF476F;
+  border-radius: 10px;
+  padding: 2rem;
+  color: #fff;
+}
+button {
+  padding: 0.75rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  background: #06D6A0;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+  font-size: 2.5rem;
+  
+}
+
 .p {
   width: 20rem;
   height: 20rem;

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mert Portfolio</title>
+    <script  src="js/script.js" defer></script>
     <script src="js/main.js" defer></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -38,6 +39,14 @@
     </section>
 
     <main>
+      <div class="spraak">
+        <img class="spraak_img" src="img/profiel2.webp" width="50px" alt="mediacollege logo">    
+        <h2>Make it Rain Speech to Text</h2>
+        <h4 id="message">Press the button below, and start speaking</h4>
+        <button onclick="startRecognition()">Speech to text</button>
+        <div id="result" class="hide"></div>
+        <div><img id="image1" class="hide"></div>
+      </div>
       <section id="about" class="me">
         <h2>About Me</h2>
         <p>I know good code when is see it &#9757;</p>
