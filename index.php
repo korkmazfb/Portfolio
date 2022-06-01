@@ -1,3 +1,15 @@
+<?php
+require 'functions.php';
+$connection = dbConnect();
+
+$result = $connection->query('SELECT * FROM `projecten`');
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -53,20 +65,21 @@
       </section>
 
       <section class="about">
-        <section class="about1">
-          <h3 class="h1">WORK &#9874;</h3>
+      <?php foreach($result as $row): ?>
+        <div class="about1">
+          <h3 class="h1"><?php echo $row['titel']; ?></h3>
 
           <figure class="p">
-            <img src="img/work.webp" alt="work" width="100%" height="100%" />
+            <img src="img/<?php echo $row['foto']; ?>" alt="work" width="100%" height="100%" />
           </figure>
-          <p class="font">
-            I worked at a lot of places like in the supermarket or a nice place
-            to eat turkish sweets or other things like bread. eventually I, want
-            to be one of the best developers in the Netherlands.
-          </p>
-        </section>
+          <p class="font"> <?php echo $row['beschrijving']; ?></p>
+          </div>
 
-        <div class="about1">
+          <?php endforeach ?>
+      </section>
+      
+
+        <!-- <div class="about1">
           <h3 class="h2">DEVELEPOR &#9819;</h3>
 
           <figure class="p">
@@ -101,7 +114,7 @@
             Media College to be a site developer and I really like it here.
           </p>
         </div>
-      </section>
+      </section>-->
       <section id="work" class="project">
   
         <h2>MY WORK ♢</h2>
