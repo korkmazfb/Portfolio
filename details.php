@@ -32,17 +32,19 @@ $place = $statement->fetch(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="detail_body">
+<header id="header">
+      <nav class="nav">
+        <img src="img/logo.webp" alt="logo" />
+        <ul>
+          <li><a href="index.php">HOME</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <div class="container">
         <h1 class="header2"><?php echo $place['titel']?></h1>
         <figure><img src="img/<?php echo $place['foto']?>" alt="" width="700px" height="500px"></figure>
         <p class="p"><?php echo $place['info']?></p>
-        <a class="p_link" href="index.php">terug naar de pagina</a>
-
-        
-
-     
-
-        
 
     </div>
     

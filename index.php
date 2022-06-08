@@ -19,6 +19,7 @@ $result = $connection->query('SELECT * FROM `projecten`');
     <title>Mert Portfolio</title>
     <script  src="js/script.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/review.js" defer></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -31,8 +32,9 @@ $result = $connection->query('SELECT * FROM `projecten`');
           <li><a href="#work">WORK</a></li>
           <li><a href="#skills">SKILLS</a></li>
           <li><a href="#contact">CONTACT</a></li>
+          <li><a href="#reviews">REVIEWS</a></li>
         </ul>
-        <a href="index.php" class="nav_button"><img src="img/unitedd.svg" alt="flagicons united kingdoms"></a>
+        <a href="index.php" class="nav_button"><img src="img/nl.svg" alt="flagicons netherlands"></a>
       </nav>
     </header>
 
@@ -262,8 +264,68 @@ $result = $connection->query('SELECT * FROM `projecten`');
           </article>
         </div>
       </section>
-      <section class="contact" id="contact">
-      <h2>CONTACT ₵</h2>
+      <section class="review_body" id="reviews">
+      <h2>REVIEWS ₵</h2>
+    <section  class="section section--third">
+        <button class="arrow"></button>
+        <ul class="reviews">
+          <li class="review">
+            <figure class="quote">&#10077;</figure>
+            <section class="stars">&#9733; &#9733; &#9733;</section>
+            <p>
+              1. One of the best people in the development buissnes.
+            </p>
+          </li>
+          <li class="review">
+            <figure class="quote">&#10077;</figure>
+            <section class="stars">&#9733; &#9733; &#9733; &#9733;</section>
+            <p>
+              2. I love this guy, beacuse of him I have 
+              a good site for my buissnes. Now I know what
+              people think about my comapny thank you Mert. 
+            </p>
+          </li>
+          <li class="review">
+            <figure class="quote">&#10077;</figure>
+            <section class="stars">&#9733; &#9733; &#9733;</section>
+            <p>
+              3. This guy is one of my old school mates he made 
+                a real;y sick site for me so people can hire me.
+            </p>
+          </li>
+          <li class="review">
+            <figure class="quote">&#10077;</figure>
+            <section class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</section>
+            <p>
+              4. This guy is amazing I asked him for a webshop for
+                the company immedatly after 3 days he got the job 
+                done.
+              
+            </p>
+          </li>
+          <li class="review">
+            <figure class="quote">&#10077;</figure>
+            <section class="stars">&#9733; &#9; ;</section>
+            <p>
+              5. This guy made a cool site for me.
+            </p>
+          </li>
+          <li class="review">
+            <figure class="quote">&#10077;</figure>
+            <section class="stars">&#9733; &#9733; &#9733; &#9733; </section>
+            <p>
+              6. I really like this guy, because he informed me everyday 
+                about what is happening in the site and what he is doing
+                everyday for my site.
+            </p>
+          </li>
+        </ul>
+        <button class="arrow">></button>
+      </section>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2>CONTACT ©</h2>
       </section>
       
 
