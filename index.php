@@ -30,8 +30,9 @@ $result = $connection->query('SELECT * FROM `projecten`');
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#work">WORK</a></li>
           <li><a href="#skills">SKILLS</a></li>
-          <li><a href="">CONTACT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
         </ul>
+        <a href="index.php" class="nav_button"><img src="img/unitedd.svg" alt="flagicons united kingdoms"></a>
       </nav>
     </header>
 
@@ -55,7 +56,7 @@ $result = $connection->query('SELECT * FROM `projecten`');
         <img class="spraak_img" src="img/profiel2.webp" width="50px" alt="mediacollege logo">    
         <h2>Make it Rain Speech to Text</h2>
         <h4 id="message">Press the button below, and start speaking</h4>
-        <button onclick="startRecognition()">Speech to text</button>
+        <button class="spraak_button" onclick="startRecognition()">Speech to text</button>
         <div id="result" class="hide"></div>
         <div><img id="image1" class="hide"></div>
       </div>
@@ -69,10 +70,11 @@ $result = $connection->query('SELECT * FROM `projecten`');
         <div class="about1">
           <h3 class="h1"><?php echo $row['titel']; ?></h3>
 
-          <figure class="p">
+          <figure class="p1">
             <img src="img/<?php echo $row['foto']; ?>" alt="work" width="100%" height="100%" />
           </figure>
           <p class="font"> <?php echo $row['beschrijving']; ?></p>
+          <a class="button" href="details.php?id=<?php echo $row['id'];?>">Meer Info</a>
           </div>
 
           <?php endforeach ?>
@@ -260,6 +262,11 @@ $result = $connection->query('SELECT * FROM `projecten`');
           </article>
         </div>
       </section>
+      <section class="contact" id="contact">
+      <h2>CONTACT ₵</h2>
+      </section>
+      
+
     </main>
     <a class="top" href="#header">Top</a>
   </body>
