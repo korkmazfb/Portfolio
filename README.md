@@ -9,4 +9,3 @@
 # Op de website komen verschillende functionaliteiten, bijvoorbeeld een formulier die je kan opsturen naar mij en je hebt ook verschillende animations op de site.
 
 # [link naar de Trello bord](https://trello.com/b/15yQhI76/portfolio)
-# [link naar de live server](http://32840.hosts1.ma-cloud.nl/portfolio)

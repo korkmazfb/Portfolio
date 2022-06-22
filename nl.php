@@ -2,7 +2,7 @@
 require 'functions.php';
 $connection = dbConnect();
 
-$result = $connection->query('SELECT * FROM `projecten`');
+$result = $connection->query('SELECT * FROM `projecten-nederlands`');
 
 $voornaam = '';
 $achternaam = '';
@@ -19,16 +19,16 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     $tijdstip = date('Y-m-d H:i:s');
 
     if( isEmpty($voornaam) ){
-        $errors['voornaam'] = 'Fill in your name please.';
+        $errors['voornaam'] = 'Vul uw voornaam in a.u.b.';
     }
     if( isEmpty($achternaam) ){
-        $errors['achternaam'] = 'Fill in your surname please.';
+        $errors['achternaam'] = 'Vul uw achternaam in a.u.b.';
     }
     if(!isValidEmail($email)){
-        $errors['email'] = 'This in not a valid E-mail adress!';
+        $errors['email'] = 'Dit is geen geldig Email-adres!';
     }
     if( !hasMinLength($bericht, 5) ){
-        $errors['bericht'] = 'Fill in at least 5 characters.';
+        $errors['bericht'] = 'Vul minimaal 5 tekens in.';
 
 
     }
@@ -47,7 +47,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         ];        
 
         $statement->execute($params);
-        header('location: bedankt.html');
+        header('Location: bedankt2.html');
         exit;
 }
     
@@ -55,8 +55,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 }
 
 ?>
+
+
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -74,12 +79,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         <ul>
           <li><a href="#header">HOME</a></li>
           <li><a href="#about">ABOUT</a></li>
-          <li><a href="#work">WORK</a></li>
+          <li><a href="#work">WERK</a></li>
           <li><a href="#skills">SKILLS</a></li>
           <li><a href="#reviews">REVIEWS</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
-        <a href="nl.php" class="nav_button"><img src="img/nl.svg" alt="flagicons netherlands"></a>
+        <a href="index.php" class="nav_button"><img  src="img/gb.svg" alt="flagicons netherlands"></a>
       </nav>
     </header>
 
@@ -92,7 +97,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
       <div class="text-box">
         <img src="img/boy2.webp" alt="boy" />
         <div>
-          <h2 class="mert">Hello I am Mert</h2>
+          <h2 class="mert">Hallo ik ben Mert</h2>
           <h2 class="mert">Web Developer</h2>
         </div>
       </div>
@@ -101,15 +106,15 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <main>
       <div class="spraak">
         <img class="spraak_img" src="img/profiel2.webp" width="50px" alt="mediacollege logo">    
-        <h2>Make it Rain Speech to Text</h2>
-        <h4 id="message">Press the button below, and start speaking</h4>
-        <button class="spraak_button" onclick="startRecognition()">Speech to text</button>
+        <h2>Make it Rain spraak naar text</h2>
+        <h4 id="message">Druk op de onderstaande knop, en begin met spreken</h4>
+        <button class="spraak_button" onclick="startRecognition()">Spraak naar text</button>
         <div id="result" class="hide"></div>
         <div><img id="image1" class="hide"></div>
       </div>
       <section id="about" class="me">
-        <h2>About Me</h2>
-        <p>I know good code when is see it &#9757;</p>
+        <h2>Over mij</h2>
+        <p>Ik ken een goede code wanneer ik hem zie &#9757;</p>
       </section>
 
       <section class="about">
@@ -121,7 +126,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             <img src="img/<?php echo $row['foto']; ?>" alt="work" width="100%" height="100%" />
           </figure>
           <p class="font"> <?php echo $row['beschrijving']; ?></p>
-          <a class="button" href="details.php?id=<?php echo $row['id'];?>">More Info</a>
+          <a class="button" href="details-nl.php?id=<?php echo $row['id'];?>">Meer Info</a>
           </div>
 
           <?php endforeach ?>
@@ -129,7 +134,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
       
       <section id="work" class="project">
   
-        <h2>MY WORK ♢</h2>
+        <h2>MIJN WERK ♢</h2>
         <div class="filters">
           <div>
             <input id="checkbox-cssart" type="checkbox" class="filter" />
@@ -187,7 +192,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         </div>
       </section>
       <section id="skills" class="skills">
-        <h2>MY SKILLS &#9883;</h2>
+        <h2>MIJN SKILLS &#9883;</h2>
         <div>
           <article class="card">
             <figure class="card_figure">
@@ -197,22 +202,23 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
               <ul class="card_categories">
                 <li class="card_category card_category--controller">Code</li>
                 <li class="card_category card_category--ps4">HTML</li>
-                <li class="card_category card_category--ps5">Programming</li>
+                <li class="card_category card_category--ps5">Programmeren</li>
               </ul>
               <header>
-                <h2 class="card_heading">My skills with HTML Code.</h2>
+                <h2 class="card_heading">Mijn skills met HTML Code.</h2>
               </header>
               <p class="card_p">
-                My code skills with HTML is not that bad and not that good, but
-                I know a lot of code in HTML and I know how to make a good
-                looking site.
+                Mijn codevaardigheden met HTML zijn niet zo slecht en niet zo goed, maar
+                Ik ken veel code in HTML en ik weet hoe ik een goed kijkende site. 
+                moet maken
+                
               </p>
             </section>
             <footer class="card_footer">
               <img class="card_pf" src="img/profiel2.webp" alt="profiel foto" />
               <div>
                 <h3>Mert Korkmaz</h3>
-                <p>3 hours ago</p>
+                <p>3 uur geleden</p>
               </div>
             </footer>
           </article>
@@ -224,22 +230,22 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
               <ul class="card_categories">
                 <li class="card_category card_category--controller">Code</li>
                 <li class="card_category card_category--ps4">CSS</li>
-                <li class="card_category card_category--ps5">Programming</li>
+                <li class="card_category card_category--ps5">Programmeren</li>
               </ul>
               <header>
-                <h2 class="card_heading">My skills with CSS Code.</h2>
+                <h2 class="card_heading">Mijn skills met CSS Code.</h2>
               </header>
               <p class="card_p">
-                My code skills with CSS are very good, because I like CSS very
-                much. I like to code with CSS, because it's so powerful and
-                really helpful in your site.
+                Mijn codevaardigheden met CSS zijn erg goed, omdat ik erg van CSS houd.
+                Ik codeer graag met CSS, omdat het zo krachtig en
+                echt nuttig in uw site.
               </p>
             </section>
             <footer class="card_footer">
               <img class="card_pf" src="img/profiel2.webp" alt="profiel foto" />
               <div>
                 <h3>Mert Korkmaz</h3>
-                <p>1 day ago</p>
+                <p>1 dag geleden</p>
               </div>
             </footer>
           </article>
@@ -249,24 +255,24 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             </figure>
             <section class="card_body">
               <ul class="card_categories">
-                <li class="card_category card_category--controller">Code</li>
+                <li class="card_category card_category--controller">code</li>
                 <li class="card_category card_category--ps4">Javascript</li>
-                <li class="card_category card_category--ps5">Programming</li>
+                <li class="card_category card_category--ps5">Programmeren</li>
               </ul>
               <header>
-                <h2 class="card_heading">My skills with Javascript Code.</h2>
+                <h2 class="card_heading">Mijn skills met Javascript Code.</h2>
               </header>
               <p class="card_p">
-                My code skills with Javascript are not that good, because I find
-                it very difficult and I make a lot of mistakes in Javascript I
-                still need to learn a lot.
+                Mijn codevaardigheden met Javascript zijn niet zo goed, omdat ik vind
+                dat het erg moeilijk is en ik maak veel fouten in Javascript en daarom
+                moet ik nog veel leren.
               </p>
             </section>
             <footer class="card_footer">
               <img class="card_pf" src="img/profiel2.webp" alt="profiel foto" />
               <div>
                 <h3>Mert Korkmaz</h3>
-                <p>4 days ago</p>
+                <p>4 dagen geleden</p>
               </div>
             </footer>
           </article>
@@ -281,57 +287,55 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             <figure class="quote">&#10077;</figure>
             <section class="stars">&#9733; &#9733; &#9733;</section>
             <p>
-              1. One of the best people in the development buissnes.
+              1. Een van de beste mensen in de ontwikkeling van buissnes.
             </p>
           </li>
           <li class="review">
             <figure class="quote">&#10077;</figure>
             <section class="stars">&#9733; &#9733; &#9733; &#9733;</section>
             <p>
-              2. I love this guy, beacuse of him I have 
-              a good site for my buissnes. Now I know what
-              people think about my comapny thank you Mert. 
+              2. Ik hou van deze man, omdat door hem heb ik
+              een goede site voor mijn buissnes. Nu weet ik wat
+              mensen denken over mijn bedrijf bedankt Mert.
             </p>
           </li>
           <li class="review">
             <figure class="quote">&#10077;</figure>
             <section class="stars">&#9733; &#9733; &#9733;</section>
             <p>
-              3. This guy is one of my old school mates he made 
-                a real;y sick site for me so people can hire me.
+                3. Deze man is een van mijn oude schoolvrienden hij heeft echt
+                een zieke site voor mij gemaakt, zodat mensen me kunnen inhuren.
             </p>
           </li>
           <li class="review">
             <figure class="quote">&#10077;</figure>
             <section class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</section>
             <p>
-              4. This guy is amazing I asked him for a webshop for
-                the company immedatly after 3 days he got the job 
-                done.
-              
+                4. Deze man is geweldig. Ik vroeg hem om een webshop voor
+                het bedrijf onmiddellijk na 3 dagen kreeg hij de baan
+                gedaan.
             </p>
           </li>
           <li class="review">
             <figure class="quote">&#10077;</figure>
             <section class="stars">&#9733; &#9; ;</section>
-            <p>
-              5. This guy made a cool site for me.
+            <p> 
+              5. Deze man heeft een coole site voor me gemaakt.
             </p>
           </li>
           <li class="review">
             <figure class="quote">&#10077;</figure>
             <section class="stars">&#9733; &#9733; &#9733; &#9733; </section>
             <p>
-              6. I really like this guy, because he informed me everyday 
-                about what is happening in the site and what he is doing
-                everyday for my site.
+            6. Ik vind deze man echt leuk, omdat hij me elke dag op de hoogte bracht
+                over wat er op de site gebeurt en wat hij doet
+                elke dag voor mijn site doet.
             </p>
           </li>
         </ul>
         <button class="arrow">></button>
       </section>
       </section>
-
 
       <section id="contact" class="contact">
         <h2>CONTACT ©</h2>
@@ -341,13 +345,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
           
 
             <header class="contact_header">
-                <h2> Have a question?</h2>
+                <h2> Heb je een vraag?</h2>
             </header>
 
-            <form action="index.php#contact"  method="POST" novalidate>
+            <form action="nl.php#contact"  method="POST" novalidate>
                 <div class="contact_form">
-                    <label for="voornaam">Name</label>
-                    <input type="text" value="<?php echo $voornaam;?>" id="voornaam" name="voornaam" placeholder="Fill in your name" required>
+                    <label for="voornaam">Naam</label>
+                    <input type="text" value="<?php echo $voornaam;?>" id="voornaam" name="voornaam" placeholder="Vul je naam in" required>
 
                     <?php if(!empty($errors['voornaam'])):?>
                         <p class="form_error"><?php echo $errors['voornaam']?></p>
@@ -355,26 +359,26 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
                 </div>
                 <div class="contact_form">
-                    <label for="achternaam">Surname</label>
-                    <input type="text" value="<?php echo $achternaam;?>" id="achternaam" name="achternaam" placeholder="Fill in your last name" required>
+                    <label for="achternaam">Achternaam</label>
+                    <input type="text" value="<?php echo $achternaam;?>" id="achternaam" name="achternaam" placeholder="vul je achternaam in" required>
                     <?php if(!empty($errors['achternaam'])):?>
                         <p class="form_error"><?php echo $errors['achternaam']?></p>
                     <?php endif;?>
                 </div>
                 <div class="contact_form">
                     <label for="email">E-mail</label>
-                    <input type="email" value="<?php echo $email;?>" id="email" name="email" placeholder="Fill in your E-mail adress" required>
+                    <input type="email" value="<?php echo $email;?>" id="email" name="email" placeholder="vul je E-mail adress in" required>
                     <?php if(!empty($errors['email'])):?>
                         <p class="form_error"><?php echo $errors['email']?></p>
                     <?php endif;?>
                 </div>
                 <div class="contact_form">
-                    <label for="bericht">Message</label>
-                    <textarea id="bericht" name="bericht" placeholder="Fill in your question or message" required><?php echo $bericht;?></textarea>
+                    <label for="bericht">Bericht</label>
+                    <textarea id="bericht" name="bericht" placeholder="Vul je vraag of bericht in" required><?php echo $bericht;?></textarea>
                     <?php if(!empty($errors['bericht'])):?>
                         <p class="form_error"><?php echo $errors['bericht']?></p>
                     <?php endif;?>
-                    <button type="submit" class="contact_button">Send</button>
+                    <button type="submit" class="contact_button">Opsturen</button>
                 </div>
                 
 
@@ -382,22 +386,18 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
         </section>
     </div>
-      
 
     </main>
     <a class="top" href="#header">Top</a>
 
-
-
     <footer class="footer">
-      <a href="https://www.linkedin.com/in/mert-korkmaz-a09b8423b/"><img  class="footer_img" src="img/profiel2.webp" alt="logo profiel"></a>
+    <a href="https://www.linkedin.com/in/mert-korkmaz-a09b8423b/"><img  class="footer_img" src="img/profiel2.webp" alt="logo profiel"></a>
       <div class="footer_text">
-        <h2 class="footer_h2">Created by Mert Korkmaz 🕵️‍♂️</h2>
+        <h2 class="footer_h2">Gemaakt door Mert Korkmaz 🕵️‍♂️</h2>
         <p class="footer_info">Mediacollege Amsterdam Student 😆</p>
-        <p class="footer_info">16 Years old 💪</p>
-        <p class="footer_info">1 Year experience in code 🧑‍💻</p>
+        <p class="footer_info">16 jaar oud 💪</p>
+        <p class="footer_info">1 jaar ervaring in code 🧑‍💻</p>
       </div>
-
     </footer>
   </body>
 </html>

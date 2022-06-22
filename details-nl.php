@@ -14,7 +14,7 @@ if($check_int == false){
     exit;
 }
 
-$statement = $connection->prepare('SELECT * FROM `projecten` WHERE id=?');
+$statement = $connection->prepare('SELECT * FROM `projecten-nederlands` WHERE id=?');
 $params = [$id];
 $statement->execute($params);
 $place = $statement->fetch(PDO::FETCH_ASSOC);
@@ -36,14 +36,14 @@ $place = $statement->fetch(PDO::FETCH_ASSOC);
       <nav class="nav">
         <img src="img/logo.webp" alt="logo" />
         <ul>
-          <li><a href="index.php">HOME</a></li>
+          <li><a href="nl.php">HOME</a></li>
         </ul>
       </nav>
     </header>
 
     <div class="container">
         <h1 class="header2"><?php echo $place['titel']?></h1>
-        <figure><img class="detail_img" src="img/<?php echo $place['foto']?>" alt="" width="700px" height="500px"></figure>
+        <figure><img src="img/<?php echo $place['foto']?>" alt="" width="700px" height="500px"></figure>
         <p class="p"><?php echo $place['info']?></p>
 
     </div>

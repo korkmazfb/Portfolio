@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+    width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  body {
+    min-height: 200vh;
+    background: #ede6db ;
+  }
+
+  body::before, body::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation-name: away;
+    animation-duration: 1.2s;
+    transform-origin: right;
+    animation-fill-mode: forwards;
+    animation-timing-function:cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  
+  body::before{
+    background: #4D77FF;
+    animation-delay: 0.3s;
+    z-index: 1;
+  }
+  
+  body::after{
+    background: #40DFEF ;
+    z-index: 2;
+  }
+
+  .contact_h1{
+    font-size: 13rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact_header{
+    font-size: 5rem;
+    margin-top: 4rem;
+    padding-left: 5rem;
+  }
+  
+  .contact_link{
+    font-size: 7rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 15rem;
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+    box-shadow: 0 0.5rem 1rem 0.5rem rgba(0, 0, 0, 0.3);
+    margin-left: 4rem;
+    margin-right: 4rem;
+    border-radius: 0.5rem;
+  }
+
+
+  @keyframes away {
+    from{
+        transform: scaleX(1);
+    }
+    to{
+        transform: scaleX(0);
+    }
+    
+  }
