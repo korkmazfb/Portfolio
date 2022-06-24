@@ -62,7 +62,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mert Portfolio</title>
-    <script  src="js/script.js" defer></script>
+    <script  src="js/script2.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/review.js" defer></script>
     <link rel="stylesheet" href="css/style.css" />

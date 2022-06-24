@@ -7,7 +7,7 @@ const image1 = document.getElementById("image1");
 startRecognition = () => {
   if (SpeechRecognition !== undefined) { // test if speechrecognitio is supported
     let recognition = new SpeechRecognition();
-    recognition.lang = 'en-US';   //'tr-TR';//'en-US'; // which language is used?
+    recognition.lang =  'en-EN'; //'en-US'; // which language is used? 'nl-NL';
     recognition.interimResults = false; // https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/interimResults
     recognition.continuous = false; // https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/continuous
    
@@ -51,21 +51,21 @@ actionSpeech = (speechText) => {
       document.body.style.color="#000000";
       image1.classList.add("hide"); // hide image (if any)
       break;
-    case "image": // let op, "fall-through"
-    case "image": // let op, "fall-through"
-      image1.src = "./img/profiel2.webp";
+    case "fotoraf": // let op, "fall-through"
+    case "goster": // let op, "fall-through"
+      image1.src = "img/profiel2.webp";
       image1.style.width = "400px";
       image1.classList.remove("hide") // show image
       break;
-    case "next page":
+    case "next page": 
       window.open("http://32840.hosts1.ma-cloud.nl/portfolio//", "_self");
       break;
+    case "person":
+        window.open("https://www.linkedin.com/in/mert-korkmaz-a09b8423b/");
+        break;
     case "help me":
       alert("Valid speech commands: black,  reset, next page");
       break;
-      case "person":
-        window.open("https://www.linkedin.com/in/mert-korkmaz-a09b8423b/");
-        break;
     default:
       // do nothing yet
   }
